@@ -3,8 +3,9 @@ services:
   sonarqube:
     container_name: sonarqube
     image: sonarqube:8-community
+    restart: always
     ports:
-      -"8006:9000"
+      - "9000:9000"
     environment:
       SONARQUBE_USERNAME: admin
       SONARQUBE_PASSWORD: admin

@@ -1,8 +1,9 @@
-version: '3.8'
+version: '3.9'
 services:
   jenkins:
     container_name: jenkins
     image: jenkins/jenkins:lts
+    restart: always
     volumes:
       - D:\DATOS\jenkins_home:/var/jenkins_home
     ports:

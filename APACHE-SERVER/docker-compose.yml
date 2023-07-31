@@ -1,9 +1,10 @@
-versión : '3.9' 
-servicios : 
-  apache : 
-    imagen : httpd:último 
-    nombre_contenedor : my-apache-app 
-    puertos : 
-    - '8080:80' 
-    volúmenes : 
-    - ./website:/usr/local/apache2/htdocs
+version: '3.9' 
+services:  
+  apache: 
+    image: httpd
+    restart: always
+    container_name: my-apache-app 
+    ports : 
+    - '8082:80' 
+    volumes:
+    - D:\DATOS\www:/usr/local/apache2/htdocs

@@ -1,0 +1,9 @@
+versión : '3.9' 
+servicios : 
+  apache : 
+    imagen : httpd:último 
+    nombre_contenedor : my-apache-app 
+    puertos : 
+    - '8080:80' 
+    volúmenes : 
+    - ./website:/usr/local/apache2/htdocs

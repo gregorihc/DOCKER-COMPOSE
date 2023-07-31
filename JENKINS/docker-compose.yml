@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins:lts
+    volumes:
+      - D:\DATOS\jenkins_home:/var/jenkins_home
+    ports:
+      - "9080:8080"
+    environment:
+      SONARQUBE_USERNAME: admin
+      SONARQUBE_PASSWORD: admin
+    networks:
+      - net
+networks:
+  net:
+    name: networks_jenkins

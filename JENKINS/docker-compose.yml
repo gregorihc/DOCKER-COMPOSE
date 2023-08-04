@@ -4,8 +4,10 @@ services:
     container_name: jenkins
     image: jenkins/jenkins:lts
     restart: always
+    privileged: true
+    user: root
     volumes:
-      - D:\DATOS\jenkins_home:/var/jenkins_home
+      - /home/sgcan_prueba/archivos/jenkins:/var/jenkins_home
     ports:
       - "9080:8080"
     environment:

@@ -7,4 +7,4 @@ services:
     ports : 
     - '8082:80' 
     volumes:
-    - D:\DATOS\www:/usr/local/apache2/htdocs
+    - /home/sgcan_prueba/archivos/apache/www:/usr/local/apache2/htdocs
